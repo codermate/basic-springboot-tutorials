@@ -1,5 +1,5 @@
 # restapi-springboot-security-jwt-secured
-#### int his project you will learn about springboot security basic using :
+in this project you will learn about springboot security basic using :
 - ssl certificate
 - http into https
 - jwt
