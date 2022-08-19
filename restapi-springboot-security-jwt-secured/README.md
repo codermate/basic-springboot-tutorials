@@ -7,7 +7,7 @@ in this project you will learn about springboot security basic using :
 - @Secured
 # 
 
-#### REST-API MVC
+#### Rest-API
 - rest-api,
 - controller, repo, service, model
 - jpa hibernate mysql,
