@@ -44,5 +44,15 @@ in this project you will learn about basic rest-api connect database mysql
 - adding mysql dependency into pom.xml
 - configure mysql into app.properties
 
+#### Mysql
+- Install Mysql
+- Create database
+- crate table
+
+#### Testing API
+- Install Postman
+- Create and test request GET
+- Create and test request POST
+
 
 
