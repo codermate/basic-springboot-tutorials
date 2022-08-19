@@ -48,9 +48,9 @@ public class SpringrestapiApplication {
     private Connector httpToHttpsRedirectConnector() {
         Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setScheme("https");
-        connector.setPort(8083); // jika client akses port ini
+        connector.setPort(8082); // jika client akses port ini
         connector.setSecure(false);
-        connector.setRedirectPort(8080); // maka akan di redirect ke port ini
+        connector.setRedirectPort(8443); // maka akan di redirect ke port ini
         return connector;
     }
 }
