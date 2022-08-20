@@ -47,17 +47,21 @@ you must download & install erlang opt and rabbitmq, go to the parent rapo for s
 
 - create class for rabbitMq configuration, in this case we will config for userMesssage with message queue = queue_get_user
 #
-    @Bean // this function for get message from rabbitmq with key queue = QUEUE_GET_USER
+    // Queue :  a queue is a container that holds your message
+    @Bean 
     public Queue queue() {
         return new Queue(QUEUE_GET_USER);
     }
 
-    @Bean // this function for get message from rabbitmq with key queue = QUEUE_GET_USER
+    // TopicExchange :  as a routing mediator to receive messages from producers and push them to message queues according 
+    // to rules provided by the RabbitMQ exchange type.
+    @Bean 
     public TopicExchange exchange() {
         return new TopicExchange(EXCHANGE_GET_USER);
     }
 
-    @Bean
+    // A binding is a “connection” that you build between a queue and an exchange
+    @Bean 
     public Binding binding(Queue queue, TopicExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with(ROUTE_GET_USER);
     }
@@ -67,6 +71,7 @@ you must download & install erlang opt and rabbitmq, go to the parent rapo for s
         return new Jackson2JsonMessageConverter();
     }
 
+    // just message converter from object into json , for saving on rabbitmq
     @Bean
     public AmqpTemplate amqpTemplate(ConnectionFactory connectionFactory) {
         final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
