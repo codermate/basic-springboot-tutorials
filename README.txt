@@ -1,3 +1,11 @@
+# Restapi-springboot-redis
+learn create rest api and will crud into redis server
+- save
+- getById
+- getAll
+- delete
+- update
+#
 ### download and install redis
 - doc spring data redis
   https://docs.spring.io/spring-data/data-redis/docs/current/reference/html/#get-started:first-steps:nosql
