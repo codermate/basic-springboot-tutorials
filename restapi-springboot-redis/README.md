@@ -25,3 +25,5 @@ learn create rest api and will crud into redis server
 - create controller file for make CRUD api
 
 
+### run and test spring redi app
+- test hit from postman endpoint save, get byid, get all
