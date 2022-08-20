@@ -18,14 +18,10 @@ learn create rest api and will crud into redis server
 
 ### spring project connect to redis
 - create springboot project
-- add spring redis dependece
-#
-<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
-<dependency>
-    <groupId>org.springframework.data</groupId>
-    <artifactId>spring-data-redis</artifactId>
-    <version>2.7.2</version>
-</dependency>
-#
--
+- add spring redis dependece see pom.xml
+- create file configuration for redis, see RedisConfig file
+- create entity file for store data from redis see Product file
+- create repo file for handle crud fuction CRUD from jedis, see ProductRepo file
+- create controller file for make CRUD api
+
 
