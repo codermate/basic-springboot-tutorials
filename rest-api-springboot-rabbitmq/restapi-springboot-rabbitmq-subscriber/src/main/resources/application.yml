@@ -1,0 +1,22 @@
+#server port http
+server :
+       port : 9981
+
+#mysql confid
+spring :
+   datasource :
+       url : jdbc:mysql://localhost:3306/db_springrestapi
+       username : root
+       password : root
+       driver-class-name : com.mysql.cj.jdbc.Driver
+
+   jpa :
+     show-sql : true
+     hibernate :
+        ddl-auto : update
+
+     properties:
+        hibernate:
+            format_sql : false
+            dialect : org.hibernate.dialect.MySQL5InnoDBDialect
+
