@@ -1,6 +1,8 @@
-# rest-api-springboot-rabbitmq-publisher
+# Make two service can communicated with rabbitMQ (messaging system)
   How to use RabbitMQ with Publisher and Consumer Example
 #
+
+### first you must install erlang otp and rabbit mq (version erlang and rabbit must be match see the rabbit documentation)
   - Install RabbitMQ in windows :
   - Download and install ERlang http://erlang.org/download/otp_win64_22.3.exe
   - Downlaod and install RabbitMQ https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.8/rabbitmq-server-3.8.8.exe
@@ -10,3 +12,13 @@
   - Also we can Open it with IP Address http://127.0.0.1:15672
   - Login page default username and password is guest
   - After successfully login you should see RabbitMQ Home page
+  
+### create project for publisher
+  see repo : restapi-springboot-rabbitmq-publisher
+  
+### create project for consumer
+  see repo : restapi-springboot-rabbitmq-publisher
+  
+### run and testing app and messaging system (rabbitmq)
+
+  
