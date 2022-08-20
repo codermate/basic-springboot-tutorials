@@ -14,10 +14,10 @@
   - After successfully login you should see RabbitMQ Home page
   
 ### create project for publisher
-  see repo : restapi-springboot-rabbitmq-publisher
+see repo : restapi-springboot-rabbitmq-publisher
   
 ### create project for consumer
-  see repo : restapi-springboot-rabbitmq-publisher
+see repo : restapi-springboot-rabbitmq-publisher
   
 ### run and testing app and messaging system (rabbitmq)
 
