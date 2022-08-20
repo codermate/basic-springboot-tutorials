@@ -1,7 +1,7 @@
 package com.denpaden.rabbitmqpublisher.rabbitmq.publisher;
 
 import com.denpaden.rabbitmqpublisher.controller.response.Response;
-import com.denpaden.rabbitmqpublisher.rabbitmq.config.MessageConstant;
+import com.denpaden.rabbitmqpublisher.rabbitmq.config.UserMessageConfig;
 import com.denpaden.rabbitmqpublisher.rabbitmq.dto.UserMessageDto;
 import com.denpaden.rabbitmqpublisher.rabbitmq.dto.UserMessageResponseDto;
 import com.denpaden.rabbitmqpublisher.rabbitmq.service.UserPublishService;
@@ -34,8 +34,8 @@ public class UserMessagePublisher {
         if (userMessageDto != null) {
             // publish message to rabbit mq
             rabbitTemplate.convertAndSend(
-                    MessageConstant.EXCHANGE_GET_USER,
-                    MessageConstant.ROUTE_GET_USER,
+                    UserMessageConfig.EXCHANGE_GET_USER,
+                    UserMessageConfig.BIND_GET_USER,
                     new UserMessageResponseDto(userMessageDto, "PROCESS", "User successfully publish " + userMessageDto.getUsername()));
 
             // write response

@@ -16,22 +16,24 @@ import org.springframework.context.annotation.Configuration;
  * Created by DenPaden on 19/08/2022.
  */
 @Configuration
-public class MessageConfig {
-
+public class UserMessageConfig {
+    public static final String QUEUE_GET_USER = "queue_get_user";
+    public static final String EXCHANGE_GET_USER = "exchange_get_user";
+    public static final String BIND_GET_USER = "bind_get_user";
 
     @Bean
     public Queue queue() {
-        return new Queue(MessageConstant.QUEUE_GET_USER);
+        return new Queue(QUEUE_GET_USER);
     }
 
     @Bean
     public TopicExchange exchange() {
-        return new TopicExchange(MessageConstant.EXCHANGE_GET_USER);
+        return new TopicExchange(EXCHANGE_GET_USER);
     }
 
     @Bean
     public Binding binding(Queue queue, TopicExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(MessageConstant.ROUTE_GET_USER);
+        return BindingBuilder.bind(queue).to(exchange).with(BIND_GET_USER);
     }
 
     @Bean
