@@ -26,7 +26,7 @@ public class DbInit implements CommandLineRunner {
     @Override
     public void run(String... args) {
         // Delete all
-        //  this.userRepository.deleteAll();
+         // this.userRepository.deleteAll();
 
         // Crete users
         User den = new User("den", passwordEncoder.encode("den123"), "USER", "ACCESS_TEST1");
@@ -35,6 +35,6 @@ public class DbInit implements CommandLineRunner {
 
         List<User> users = Arrays.asList(den, admin, manager);
         // Save to db
-        // this.userRepository.saveAll(users);
+     //    this.userRepository.saveAll(users);
     }
 }

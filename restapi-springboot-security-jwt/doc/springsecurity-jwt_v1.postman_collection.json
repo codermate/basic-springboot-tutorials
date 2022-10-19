@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "9a69b625-8188-4087-a0f7-3f615dc2e989",
+		"name": "springsecurity-jwt_v1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2794968"
+	},
+	"item": [
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"den\", \"password\":\"den123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:9999/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "X-AUTH-TOKEN.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2MTcxNDk4NX0.KfpxjSMWhHmLM3-s_RcMGD0ER3juhtIa2vUOyBq1fyIUAQNfyBd95J4H98_oUCEggUZY_XXANcVx7T6rBoy4NQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ron\",\r\n    \"password\":\"ron123\",\r\n    \"roles\": \"ADMIN\",\r\n    \"permission\":\"ACCESS_TEST1\",\r\n    \"blocked\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/api/user/save",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"api",
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "X-AUTH-TOKEN.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2NzAwNzExN30.7eOhzRiCdj5RwDj4sAk00pPp2K1s1adpYem6uGRYTIJvLmmkFpqFzje45cfN7qeD7Y89bjr-CcFSz_ncwMWuOw",
+						"type": "text"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "X-AUTH-TOKEN.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkZW4iLCJleHAiOjE2NjcwMDcxODZ9.auf-y3uBrE36eAsUBcYRWMljLCvucEcvSZgnonwEWWZut3ZyPH0TnHWNuWayxTL9HxTClYJevVjCPtLzhmy78g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:9999/api/user/getAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"api",
+						"user",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user get id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "X-AUTH-TOKEN.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2MTczOTgxNX0.ruSQMtS0FJ4vrNIbfe9-kemv8QST4Dw99npOvCCaEtuHcxREc5G-FkMhiyjDw7iF_b9KxbLuKZNHTnyqq80Pyg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/user/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ret\",\r\n    \"age\":30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8080/api/customer/save",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer get all",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "X-AUTH-TOKEN.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY2MTcxMzI3NH0.GmTljHYKreNhIRSB_f00ke13PhwEOIAH5-jDDUBzSh-7MTjnFX1sGaJ7q6-s0Y-5sNRb-Mt-LxaNAxRqq0dRfA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8080/api/user/getAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report salesinvoice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8080/api/report/salesinvoice",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"report",
+						"salesinvoice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rabbit publish order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"ron\",\r\n    \"password\":\"ron123\",\r\n    \"roles\": \"ADMIN\",\r\n    \"permission\":\"ACCESS_TEST1000\",\r\n    \"blocked\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9999/publish/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"publish",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

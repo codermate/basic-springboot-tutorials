@@ -1,8 +1,12 @@
 package com.denpaden.springrestapi.security.jwt;
 
 import com.auth0.jwt.JWT;
+import com.denpaden.springrestapi.controller.response.Response;
 import com.denpaden.springrestapi.security.UserPrincipal;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -69,5 +73,13 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
         // Add token in response
         response.addHeader(JwtProperties.TOKEN_X_KEY, JwtProperties.TOKEN_PREFIX + token);
+
+        // add body
+        Response statusResponse = new Response(HttpStatus.OK.toString(), "Login success", "Grab the JWT on the header!");
+        Object body = new ResponseEntity<>(statusResponse, HttpStatus.OK);
+        response.setContentType("application/json");
+        response.setStatus(HttpServletResponse.SC_OK);
+        response.getWriter().write(new Gson().toJson(body));
+        response.getWriter().flush();
     }
 }
